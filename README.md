@@ -23,4 +23,6 @@
 * **数据引用**app.js中的数据如果需要在其他页面被引用，小程序提供了`getApp()`这个方法，除了app.js,其他的js文件之间数据的引用只能是通过`wx.setStorage`存在缓存中
 * **参数传递**页面中触发方法需要传参时，小程序提供了data属性，这是在元素身上，通过在发发内部`e.currentTarget.dataset.数据`来读取参数
 
+* **获取用户授权** 注册的时候获取用户授权，如果用户第一次点击了拒绝，则下一次无法调起授权需要使用`wx.getSetting()`和`wx.openSetting()`两个函数来直接调起授权设置页面具体请参考：[小程序 setting 文档](https://mp.weixin.qq.com/debug/wxadoc/dev/api/setting.html)， [关于微信小程序拒绝授权后，重新授权并获取用户信息](http://www.cnblogs.com/commissar-Xia/p/6856951.html)
+
 暂时就想到这么多，遇到新的问题在回来记录。（每天进步一点点）
